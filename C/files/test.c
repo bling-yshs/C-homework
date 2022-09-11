@@ -1,37 +1,9 @@
 #include <stdio.h>
-#include <math.h>
-int solve(int n)
+int main(int argc, char const *argv[])
 {
-    
-    int d = log10(n); // n = 36
-    int sum = 0;
-    int b;
-    int c = n;
-    do
-    {
-        sum = 0;
-        for (int i = 0; i <= d; i++)
-        {
-            b = c % 10; // b = 6 b = 3%10
-            sum += b;   // sum = 6
-            c = c / 10; // c = 3
-        }
-        c = sum;
-    } while (sum >= 10);
-
-    printf("%d", sum);
+    printf("Outputs:\n");
+    printf("——————————————\n\n");
+    printf("\n\n——————————————");
+    return 0;
 }
 
-int main()
-{
-    solve(999);
-    char n;
-    n=getchar();
-}
-
-// for (int i = 0; i <= d; i++)
-// {
-//     b = n % 10; // b = 6 b = 3%10
-//     sum += b;   // sum = 6
-//     n = n / 10; // c = 3
-// }
