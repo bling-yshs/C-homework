@@ -22,13 +22,13 @@ void dfs(char **grid, int m, int n, int row, int column)
     {
         dfs(grid, m, n, row, column - 1);
     }
-    if ((column+1)!=n)
+    if ((column + 1) != n)
     {
         dfs(grid, m, n, row, column + 1);
     }
 }
 
-int solve(char * *grid, int m, int n)
+int solve(char **grid, int m, int n)
 {
     int row, column;
     int totalLand = 0;
