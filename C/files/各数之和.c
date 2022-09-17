@@ -3,33 +3,24 @@
 int solve(int n)
 {
     
-    int d = log10(n); // n = 36
+    int d = log10(n); //求出有几位数
     int sum = 0;
     int b;
-    int c = n;
     do
     {
         sum = 0;
         for (int i = 0; i <= d; i++)
         {
-            b = c % 10; // b = 6 b = 3%10
-            sum += b;   // sum = 6
-            c = c / 10; // c = 3
+            b = n % 10;
+            sum += b;
+            n = n / 10;
         }
-        c = sum;
+        n = sum;
     } while (sum >= 10);
-
-    printf("%d", sum);
+    return sum;
 }
 
 int main()
 {
     solve(999);
 }
-
-// for (int i = 0; i <= d; i++)
-// {
-//     b = n % 10; // b = 6 b = 3%10
-//     sum += b;   // sum = 6
-//     n = n / 10; // c = 3
-// }
