@@ -148,7 +148,7 @@ int main(int argc, char const *argv[])
     }
 
     //删除重复的日期
-    for (int i = 3 - wrongdate; i >= 1; i--)
+    for (int i = 3 - wrongdate - 1; i >= 1; i--)
     {
         if (date1[i].year == date1[i - 1].year && date1[i].month == date1[i - 1].month && date1[i].day == date1[i - 1].day)
         {
